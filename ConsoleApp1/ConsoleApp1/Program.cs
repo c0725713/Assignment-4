@@ -19,6 +19,7 @@ namespace ConsoleApp1
             p.Run(); //Section A
             string lines = System.IO.File.ReadAllText("U:/Users/725713/jashan/beowulf.txt");
             p.FindNumberOfBlankSpaces(lines); //(Section B )
+            p.ProcessArrayList();
 
         }
         public void Run() { this.ReadTextFiles(); }
@@ -54,6 +55,30 @@ namespace ConsoleApp1
                 Console.WriteLine($"File has {countletters} Words.");
             }
             return countSpaces;
+        }
+        public void ProcessArrayList()
+        {
+            int LineNumber = 0;
+            foreach (var line in Beowulf)
+
+            {
+
+                if (!ContainWord(line.ToString().ToLower(), "war") && ContainWord(line.ToString().ToLower(), "fare"))
+                {
+                    Console.WriteLine(line);
+                    Console.WriteLine("Line number is {0}", LineNumber);
+                    LineNumber++;
+                }
+            }
+            Console.WriteLine(LineNumber);
+        }
+        public bool ContainWord(string line, string Word)
+        {
+            if (line.Contains(Word) == true)
+            {
+                return true;
+            }
+            return false;
         }
 
     }
