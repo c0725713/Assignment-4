@@ -18,6 +18,7 @@ namespace ConsoleApp1
             p.beowulf = new ArrayList();
             p.Run();
         }
+        //
         public void Run() { this.ReadTextFiles(); }
         public void ReadTextFiles()
         {
