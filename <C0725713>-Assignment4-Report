@@ -1,1 +1,12 @@
 
+1)How many lines in total are there in the file: "4016"
+
+2)How many WORDS are there in the file: "37807"
+
+3)Line numbers of the lines which contain BOTH of these words:
+Sea and Fare (cover both upper and lower case): "8"
+
+4)Line numbers of the lines which contain the word: "14"
+Fare
+Without the word: War
+5)Average number of letters per word returned as a float:"213532"
