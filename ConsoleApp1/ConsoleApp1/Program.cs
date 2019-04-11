@@ -10,24 +10,26 @@ namespace ConsoleApp1
 {
     class Program
     {
-        ArrayList Beowulf;
+        ArrayList beowulf;
 
         static void Main(string[] args)
         {
             Program p = new Program();
-            p.Beowulf = new ArrayList();
+            p.beowulf = new ArrayList();
+            p.Run();
         }
         public void Run() { this.ReadTextFiles(); }
         public void ReadTextFiles()
         {
-            using (StreamReader file = new StreamReader("U:/jashan/beowulf.txt"))
+            using (StreamReader file = new StreamReader("U:/Users/725713/jashan/beowulf.txt"))
             {
                 int counter = 0;
                 string ln;
                 while ((ln = file.ReadLine()) != null)
                 {
                     Console.WriteLine(ln);
-                    Beowulf.Add(ln);
+                    counter++;
+                    beowulf.Add(ln);
 
                 }
                 file.Close();
